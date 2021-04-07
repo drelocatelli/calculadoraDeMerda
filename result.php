@@ -21,16 +21,18 @@
         }
 
         public function calculaMerda(){
-            $this->rendimento = $this->rendimento/9600;
-            $this->mediaTempo = $this->diasUteis * $this->mediatempo;
+            // $this->rendimento = $this->rendimento/9600;
+            // $this->mediaTempo = $this->diasUteis * $this->mediatempo;
 
-            return $this->rendimento * $this->mediaTempo * $this->banheiroDia;
+            return $this->rendimento;
         }
 
         public function statusMerda(){
-            if($this->calculaMerda() < 1800){
+            if($this->calculaMerda() <= 1000){
+                return 'Estagiário';
+            }elseif($this->calculaMerda() <= 3000){
                 return 'Junior';
-            }else if($this->calculaMerda >= 1900){
+            }else if($this->calculaMerda() <= 5000){
                 return 'Pleno';
             }else{
                 return 'Sennior';
@@ -40,6 +42,8 @@
     }
 
 $calculadora = new Calculadora($_POST['rendimento'], $_POST['diaUteis'], $_POST['banheiroDia'], $_POST['mediaTempo']);
+
+echo $calculadora->rendimento;
 ?>
 
 <!DOCTYPE html>
