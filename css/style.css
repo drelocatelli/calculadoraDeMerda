@@ -56,7 +56,7 @@ input,button{
     box-sizing: border-box;
 }
 
-@media screen and (min-width:400px){
+@media screen and (max-width:400px){
     input,button{
         width:100%;
     }
