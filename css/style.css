@@ -1,0 +1,73 @@
+/*
+
+Pack de fonts web com: Lato.ttf, Montserrat.ttf, OpenSans.tff, PT_Sans.ttf, Raleway.ttf
+
+[TUTORIAL]
+Cole este arquivo dentro da pasta 'css/'
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+
+*{font-family:'Open Sans',sans-serif;}
+
+body{
+    font-size: 65.2%;
+    line-height: 2.8em;
+}
+
+span{font-size:1.2rem;}
+
+h1{
+    font-family: 'Lobster';
+    color: #A97E57;
+    font-size: 3.8rem;
+}
+
+.content {
+    margin-top:25vh;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+
+img{user-select: none;}
+
+emoji{font-size:36px; position:relative; top: -5px;}
+
+price {
+    font-weight: bold;
+    color: #4bb54b;
+}
+
+/*              FORM                */
+
+input,button{
+    outline:none;
+    width:80vh;
+    box-sizing: border-box;
+}
+
+
+button {
+    background: #a97e57;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    border: transparent;
+    cursor: pointer;
+}
+
+input{
+    border:1px solid #ccc;
+    padding:10px 15px;
+    margin-bottom:20px;
+}
