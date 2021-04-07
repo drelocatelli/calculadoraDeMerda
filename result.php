@@ -35,7 +35,7 @@
             }else if($this->calculaMerda() <= 5000){
                 return 'Pleno';
             }else{
-                return 'Sennior';
+                return 'Senior';
             }
         }
         
