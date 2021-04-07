@@ -56,6 +56,12 @@ input,button{
     box-sizing: border-box;
 }
 
+@media screen and (min-width:400px){
+    input,button{
+        width:100%;
+    }
+}
+
 
 button {
     background: #a97e57;
