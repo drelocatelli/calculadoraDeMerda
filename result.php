@@ -26,9 +26,11 @@
         }
 
         public function statusMerda(){
-            if($this->calculaMerda() <= 1000){
+            if($this->calculaMerda() < 600){
+                return 'Desempregado';
+            }else if($this->calculaMerda() <= 800){
                 return 'Estagiário';
-            }elseif($this->calculaMerda() <= 3000){
+            }else if($this->calculaMerda() <= 2000){
                 return 'Junior';
             }else if($this->calculaMerda() <= 5000){
                 return 'Pleno';
@@ -58,6 +60,9 @@ $calculadora = new Calculadora($_POST['rendimento'], $_POST['banheiroDia'], $_PO
         <h1>Parabéns você é</h1>
         <h2 style="color:#A97E57;font-size: 29px; font-weight: normal; position: relative;
         top: -21px; text-transform:uppercase;">CAGÃO <?php echo $calculadora->statusMerda(); ?> <emoji>💩️</emoji></h2>
+        <?php if($calculadora->statusMerda() == 'Desempregado'){ ?>
+            <span>Veja se você tem direito ao auxílio emergencial!!</span>
+        <?php } ?>
         <span>Você ganha <price>R$ <?php echo $calculadora->calculaMerda(); ?></price><br>mensais apenas para 💩️💩️💩️💩️ <?php echo $calculadora->banheiroDia; ?>x</span>
         <br><br>
         <button type="button" style="background:#2E9839;">QUERO PARTICIPAR DO RANKING</button>
