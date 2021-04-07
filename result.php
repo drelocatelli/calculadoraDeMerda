@@ -58,7 +58,7 @@ $calculadora = new Calculadora($_POST['rendimento'], $_POST['banheiroDia'], $_PO
         <h1>Parabéns você é</h1>
         <h2 style="color:#A97E57;font-size: 29px; font-weight: normal; position: relative;
         top: -21px; text-transform:uppercase;">CAGÃO <?php echo $calculadora->statusMerda(); ?> <emoji>💩️</emoji></h2>
-        <span>Você ganha <price>R$ <?php echo $calculadora->calculaMerda(); ?></price><br>mensais apenas para 💩️💩️💩️💩️</span>
+        <span>Você ganha <price>R$ <?php echo $calculadora->calculaMerda(); ?></price><br>mensais apenas para 💩️💩️💩️💩️ <?php echo $calculadora->banheiroDia; ?>x</span>
         <br><br>
         <button type="button" style="background:#2E9839;">QUERO PARTICIPAR DO RANKING</button>
     </div>
