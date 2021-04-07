@@ -1,20 +1,18 @@
 <?php
     
-    if (!$_POST['rendimento'] && !$_POST['diaUteis'] && !$_POST['banheiroDia'] && !$_POST['mediaTempo']) {
+    if (!$_POST['rendimento'] && !$_POST['banheiroDia'] && !$_POST['mediaTempo']) {
         header("Location: index.php?error=true");
     }
 
     class Calculadora{
 
         public $rendimento;
-        public $diasUteis;
         public $banheiroDia;
         public $mediaTempo;
 
-        public function __construct($rendimento, $diasUteis, $banheiroDia, $mediaTempo){
+        public function __construct($rendimento, $banheiroDia, $mediaTempo){
             
             $this->rendimento = (float)$rendimento;
-            $this->diasUteis = (float)$diasUteis;
             $this->banheiroDia = (float)$banheiroDia;
             $this->mediaTempo = (float)$mediaTempo;
             
@@ -41,7 +39,7 @@
         
     }
 
-$calculadora = new Calculadora($_POST['rendimento'], $_POST['diaUteis'], $_POST['banheiroDia'], $_POST['mediaTempo']);
+$calculadora = new Calculadora($_POST['rendimento'], $_POST['banheiroDia'], $_POST['mediaTempo']);
 
 ?>
 
