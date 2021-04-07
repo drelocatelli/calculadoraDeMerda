@@ -43,7 +43,6 @@
 
 $calculadora = new Calculadora($_POST['rendimento'], $_POST['diaUteis'], $_POST['banheiroDia'], $_POST['mediaTempo']);
 
-echo $calculadora->rendimento;
 ?>
 
 <!DOCTYPE html>
