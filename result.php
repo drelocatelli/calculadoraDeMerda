@@ -1,9 +1,4 @@
 <?php
-
-echo $_POST['rendimento']. '<br>';
-echo $_POST['banheiroDia']. '<br>';
-echo $_POST['diaUteis'] . '<br>';
-echo $_POST['mediaTempo'];
     
     if (!$_POST['rendimento'] && !$_POST['diaUteis'] && !$_POST['banheiroDia'] && !$_POST['mediaTempo']) {
         header("Location: index.php?error=true");
@@ -29,7 +24,17 @@ echo $_POST['mediaTempo'];
             $this->rendimento = $this->rendimento/9600;
             $this->mediaTempo = $this->diasUteis * $this->mediatempo;
 
-            echo $this->rendimento * $this->mediaTempo * $this->banheiroDia;
+            return $this->rendimento * $this->mediaTempo * $this->banheiroDia;
+        }
+
+        public function statusMerda(){
+            if($this->calculaMerda() < 1800){
+                return 'Junior';
+            }else if($this->calculaMerda >= 1900){
+                return 'Pleno';
+            }else{
+                return 'Sennior';
+            }
         }
         
     }
@@ -51,8 +56,8 @@ $calculadora = new Calculadora($_POST['rendimento'], $_POST['diaUteis'], $_POST[
     <div class="content" style="background-color:#F5F5F5; padding:15px;">
         <h1>Parabéns você é</h1>
         <h2 style="color:#A97E57;font-size: 29px; font-weight: normal; position: relative;
-        top: -21px;">CAGÃO SENNIOR <emoji>💩️</emoji></h2>
-        <span>Você ganha <price>R$ <?php $calculadora->calculaMerda(); ?></price><br>mensais apenas para 💩️💩️💩️💩️</span>
+        top: -21px; text-transform:uppercase;">CAGÃO <?php echo $calculadora->statusMerda(); ?> <emoji>💩️</emoji></h2>
+        <span>Você ganha <price>R$ <?php echo $calculadora->calculaMerda(); ?></price><br>mensais apenas para 💩️💩️💩️💩️</span>
         <br><br>
         <button type="button" style="background:#2E9839;">QUERO PARTICIPAR DO RANKING</button>
     </div>
