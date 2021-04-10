@@ -39,7 +39,7 @@
     let form = document.querySelector('form[name=calculamerda]');
     let input = form.querySelectorAll('input');
 
-    window.onclick = function(){
+    window.onload = function(){
         playPum();
     }
 
