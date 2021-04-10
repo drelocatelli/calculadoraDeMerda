@@ -17,6 +17,10 @@
         <audio id="somPeido">
             <source src="sound/peido.mp3" type="audio/mpeg"></source>
         </audio>
+
+        <audio id="somPeido2">
+            <source src="sound/peido2.mp3" type="audio/mpeg"></source>
+        </audio>
     
         <img src="img/title1.png"><br><br>
 
@@ -40,25 +44,25 @@
     let input = form.querySelectorAll('input');
 
     window.onload = function(){
-        playPum();
+        playPum('audio#somPeido2');
     }
 
     input.forEach(function(item) {
-        item.onclick = function(){playPum()};
+        item.onclick = function(){playPum('audio#somPeido2')};
     });
 
     form.onsubmit = function(event) {
         event.preventDefault();
 
-        playPum();
+        playPum('audio#somPeido');
 
         setTimeout(() => {
             form.submit();
         },600);
     }
 
-    function playPum() {
-        let somPeido =  document.querySelector('audio#somPeido');
+    function playPum(audio) {
+        let somPeido =  document.querySelector(audio);
         somPeido.play();
     }
 
