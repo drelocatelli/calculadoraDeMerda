@@ -22,7 +22,7 @@
             <source src="sound/peido2.mp3" type="audio/mpeg"></source>
         </audio>
     
-        <img src="img/title1.png"><br><br>
+        <img src="img/title1.png" onclick="playPum('audio#somPeido2');"><br><br>
 
         <form name="calculamerda" method="post" action="result.php">
             <input type="number" min="1" name="rendimento" placeholder="Qual seu salário ou rendimentos mensais?" autofocus><br>
