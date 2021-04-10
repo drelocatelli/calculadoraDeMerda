@@ -52,7 +52,7 @@ price {
 
 input,button{
     outline:none;
-    width:80vh;
+    width:100%;
     box-sizing: border-box;
 }
 

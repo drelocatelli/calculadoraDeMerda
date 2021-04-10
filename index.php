@@ -21,7 +21,7 @@
         <img src="img/title1.png"><br><br>
 
         <form name="calculamerda" method="post" action="result.php">
-            <input type="number" min="1" name="rendimento" placeholder="Qual seu salário ou rendimentos mensais?"><br>
+            <input type="number" min="1" name="rendimento" placeholder="Qual seu salário ou rendimentos mensais?" autofocus><br>
             <input type="number" min="1" name="banheiroDia" placeholder="Quantas vezes você vai no banheiro por dia?"><br>
             <input type="number" min="1" name="mediaTempo" placeholder="Qual o tempo gasto em cada vez por minuto?"><br>
             <?php if($_GET['error'] == "true"){ ?>
