@@ -56,6 +56,10 @@ $calculadora = new Calculadora($_POST['rendimento'], $_POST['banheiroDia'], $_PO
 </head>
 <body>
 
+    <audio id="somPeido2">
+        <source src="sound/peido3.mp3" type="audio/mpeg"></source>
+    </audio>
+
     <div class="content" style="background-color:#F5F5F5; padding:15px;">
         <h1>Parabéns você é</h1>
         <h2 style="color:#A97E57;font-size: 29px; font-weight: normal; position: relative;
@@ -74,5 +78,15 @@ $calculadora = new Calculadora($_POST['rendimento'], $_POST['banheiroDia'], $_PO
 <script>
     document.querySelector('button').onclick = function(){
         alert('em breve kkk')
+    }
+
+    window.onload = function(){
+        playPum('audio#somPeido2');
+    }
+
+
+    function playPum(audio) {
+        let somPeido =  document.querySelector(audio);
+        somPeido.play();
     }
 </script>
