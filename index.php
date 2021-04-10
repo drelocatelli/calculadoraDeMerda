@@ -37,6 +37,11 @@
 <script>
 
     let form = document.querySelector('form[name=calculamerda]');
+    let input = form.querySelectorAll('input');
+
+    input.forEach(function(item) {
+        item.onclick = playPum();
+    });
 
     form.onsubmit = function(event) {
         event.preventDefault();
