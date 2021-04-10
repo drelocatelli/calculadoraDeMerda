@@ -21,18 +21,19 @@
         <audio id="somPeido2">
             <source src="sound/peido2.mp3" type="audio/mpeg"></source>
         </audio>
-    
-        <img src="img/title1.png" onclick="playPum('audio#somPeido2');"><br><br>
 
-        <form name="calculamerda" method="post" action="result.php">
-            <input type="number" min="1" name="rendimento" placeholder="Qual seu salário ou rendimentos mensais?" autofocus><br>
-            <input type="number" min="1" name="banheiroDia" placeholder="Quantas vezes você vai no banheiro por dia?"><br>
-            <input type="number" min="1" name="mediaTempo" placeholder="Qual o tempo gasto em cada vez por minuto?"><br>
-            <?php if($_GET['error'] == "true"){ ?>
-            <span class="error" style="color:red; margin-bottom:5px;">Você precisa digitar os dados corretamente para mostrar o resultado!</span><br><br>
-            <?php } ?>
-            <button type="submit">Calcular</button>
-        </form>
+        <img src="img/title1.png" onclick="playPum('audio#somPeido2');"><br><br>
+        <div id="form">
+            <form name="calculamerda" method="post" action="result.php">
+                <input type="number" min="1" name="rendimento" placeholder="Qual seu salário ou rendimentos mensais?" autofocus><br>
+                <input type="number" min="1" name="banheiroDia" placeholder="Quantas vezes você vai no banheiro por dia?"><br>
+                <input type="number" min="1" name="mediaTempo" placeholder="Qual o tempo gasto em cada vez por minuto?"><br>
+                <?php if($_GET['error'] == "true"){ ?>
+                <span class="error" style="color:red; margin-bottom:5px;">Você precisa digitar os dados corretamente para mostrar o resultado!</span><br><br>
+                <?php } ?>
+                <button type="submit">Calcular</button>
+            </form>
+        </div>
     </div>
     
 </body>
