@@ -41,7 +41,7 @@ h1{
 
 img{user-select: none;}
 
-#form{width:100vh;}
+/* #form{width:100vh;} */
 
 emoji{font-size:36px; position:relative; top: -5px;}
 
